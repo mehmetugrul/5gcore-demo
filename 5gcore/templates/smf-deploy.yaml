@@ -49,7 +49,7 @@ spec:
         - name: OTEL_METRICS_EXPORTER
           value: none
         - name: OTEL_RESOURCE_ATTRIBUTES
-          value: service.name=open5gs-smf,service.namespace=open5gcore
+          value: service.name=open5gs-smf-shared,service.namespace=open5gcore
         volumeMounts:
           - name: open5gs-smf-config
             mountPath: /open5gs/config-map/smf.yaml
