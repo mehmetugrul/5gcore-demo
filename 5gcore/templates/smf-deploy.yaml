@@ -43,7 +43,7 @@ spec:
         - open5gs-smfd -d -c /open5gs/config-map/smf.yaml;
         env:
         - name: OTEL_EXPORTER_OTLP_ENDPOINT
-          value: http://open5gs-otel.open5gs.svc:4317
+          value: http://open5gs-otel-collector.open5gs.svc:4317
         - name: OTEL_TRACES_EXPORTER
           value: otlp
         - name: OTEL_METRICS_EXPORTER
