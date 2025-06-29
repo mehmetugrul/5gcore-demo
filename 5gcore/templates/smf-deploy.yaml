@@ -41,6 +41,15 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
         - open5gs-smfd -d -c /open5gs/config-map/smf.yaml;
+        env:
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+          value: http://open5gs-otel.open5gs.svc:4317
+        - name: OTEL_TRACES_EXPORTER
+          value: otlp
+        - name: OTEL_METRICS_EXPORTER
+          value: none
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: service.name=open5gs-smf,service.namespace=open5gcore
         volumeMounts:
           - name: open5gs-smf-config
             mountPath: /open5gs/config-map/smf.yaml
