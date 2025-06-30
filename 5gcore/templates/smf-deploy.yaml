@@ -23,7 +23,7 @@ metadata:
   labels:
     epc-mode: smf
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       epc-mode: smf
