@@ -8,14 +8,13 @@ metadata:
   labels:
     epc-mode: amf
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     epc-mode: amf
   ports:
     - protocol: SCTP
       port: 38412
       targetPort: 38412
-  type: ClusterIP
 ---
 apiVersion: v1
 kind: Service
