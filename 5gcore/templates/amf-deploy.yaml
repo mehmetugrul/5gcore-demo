@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: amf-open5gs-sctp
   annotations:
-    submariner.io/global: "true"
+    submariner.io/globalnet-enabled: "true"
   labels:
     epc-mode: amf
 spec:
