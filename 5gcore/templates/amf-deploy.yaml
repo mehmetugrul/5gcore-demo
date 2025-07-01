@@ -15,7 +15,7 @@ spec:
     - protocol: SCTP
       port: 38412
       targetPort: 38412
-      nodePort: 30412
+  type: ClusterIP
 ---
 apiVersion: v1
 kind: Service
